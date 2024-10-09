@@ -132,9 +132,9 @@ The Postman collection contains the following requests and test scripts:
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
----
-
+```txt
 Best Regards,  
 **Abdelrahman Ellithy**  
 Software Development Engineer in Test & Instructor  
 Udemy & Software Institute 👨‍💻
+```
