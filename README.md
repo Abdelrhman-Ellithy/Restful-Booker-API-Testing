@@ -134,7 +134,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ```txt
 Best Regards,  
-**Abdelrahman Ellithy**  
+Abdelrahman Ellithy  
 Software Development Engineer in Test & Instructor  
 Udemy & Software Institute 👨‍💻
 ```
