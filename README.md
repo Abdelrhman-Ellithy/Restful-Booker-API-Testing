@@ -25,7 +25,8 @@ The purpose of this project is to automate testing of the Restful-Booker API to 
 - **Newman** for command-line execution of Postman collections.
 - **Node.js** for running Newman and managing dependencies. 🖥️
 
-![NPM Logo](https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.png)
+
+![NPM Logo](https://th.bing.com/th/id/OIP.W9KqKY8XIN2U66v1oa7TYgHaGa?w=179&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7)
 
 ## API Endpoints Tested
 
