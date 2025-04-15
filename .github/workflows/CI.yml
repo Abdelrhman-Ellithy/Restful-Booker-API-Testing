@@ -36,7 +36,7 @@ jobs:
           path: artifacts/**
 
   run-api-tests:
-    name: Run API E2E Tests
+    name: Run API Tests
     runs-on: ubuntu-latest
     needs: export-postman-data
     env:

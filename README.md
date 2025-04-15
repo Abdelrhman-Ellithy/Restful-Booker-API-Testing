@@ -9,11 +9,11 @@ This project contains a set of API tests for the [Restful-Booker API](https://re
 - [Project Overview](#project-overview)
 - [API Endpoints Tested](#api-endpoints-tested)
 - [Prerequisites](#prerequisites)
+- [Exporting Postman Data](#exporting-postman-data)
 - [Installation](#installation)
 - [Running the Tests](#running-the-tests)
 - [Environment Setup](#environment-setup)
 - [Test Collection Structure](#test-collection-structure)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Project Overview
@@ -50,6 +50,22 @@ Before running the tests, ensure that you have the following installed:
 - [npm](https://www.npmjs.com/get-npm) (bundled with Node.js) 📦
 - [Postman](https://www.postman.com/downloads/) (for test development) 🛠️
 - [Newman](https://www.npmjs.com/package/newman) (for running Postman collections via CLI)
+
+## Exporting Postman Data 🔄
+
+This project includes an automated mechanism for exporting the Postman collection and environment data from Postman to the repository. The bash script `export_postman_collection_environment.sh` handles this process, leveraging the Postman API for exporting the collection and environment. Here's how it works:
+
+1. The script uses **Postman API** to fetch the collection and environment using the provided API key.
+2. The collection and environment files are saved locally as `postman_collection.json` and `pm_environment.json`.
+3. These files are then uploaded as artifacts, making them available for running tests via Newman.
+
+To run this process in a CI pipeline (e.g., GitHub Actions), the following steps are executed:
+- The bash script is invoked to fetch the latest collection and environment from Postman.
+- The collection and environment files are stored in the `artifacts` directory.
+- The Postman collection and environment files are used to execute the tests via Newman.
+
+For detailed instructions, please refer to the [GitHub Actions CI configuration](.github/workflows/CI.yml).
+
 
 ## Running the Tests 🏃‍♂️
 
