@@ -13,7 +13,7 @@ jobs:
     env:
       POSTMAN_API_KEY: ${{ secrets.POSTMAN_API_KEY }}
       CollectionID: ${{ secrets.PMCOLLECTIONID }}
-      ENVIRONEMENTID: ${{ secrets.PMENIRONMENTID }}
+      ENVIRONEMENTID: ${{ secrets.PMENVIRONMENTID }}
       ENVIRONMENT_NAME: "pm_environment.json"
       COLLECTION_NAME: "postman_collection.json"
     steps:
