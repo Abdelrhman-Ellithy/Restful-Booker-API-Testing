@@ -27,6 +27,7 @@ jobs:
           chmod +x ./export_postman_collection_environment.sh
           mkdir -p artifacts/
           ./export_postman_collection_environment.sh
+          cat artifacts/${{ env.ENVIRONMENT_NAME }}
 
       - name: Upload exported artifacts
         uses: actions/upload-artifact@v4
@@ -56,7 +57,10 @@ jobs:
           npm install -g newman newman-reporter-htmlextra
 
       - name: Run Newman Collection
-        run: newman run "artifacts/${{ env.COLLECTION_NAME }}" -e "artifacts/${{ env.ENVIRONMENT_NAME }}" -r cli,htmlextra --reporter-htmlextra-export "artifacts/Reports/Test-Report.html" --bail false
+        run: |
+          pwd
+          ls -la artifacts
+          newman run "artifacts/${{ env.COLLECTION_NAME }}" -e "artifacts/${{ env.ENVIRONMENT_NAME }}" -r cli,htmlextra --reporter-htmlextra-export "artifacts/Reports/Test-Report.html" --bail false
 
       - name: Upload API Test Report
         uses: actions/upload-artifact@v4
