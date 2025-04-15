@@ -15,7 +15,7 @@ download_resource() {
   local resource_id="$2"
   local output_file="$3"
   local display_name="$4"
-
+  echo "resource id ${resource_id}..."
   echo "Exporting ${display_name}..."
   curl -s -X GET "https://api.getpostman.com/${resource_type}/${resource_id}" \
        -H "X-Api-Key: ${POSTMAN_API_KEY}" -o "${output_file}"
