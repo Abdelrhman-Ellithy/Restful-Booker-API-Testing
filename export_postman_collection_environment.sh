@@ -51,5 +51,5 @@ copy_artifact "${COLLECTION_NAME}" "artifacts/"
 copy_artifact "${ENVIRONMENT_NAME}" "artifacts/"
 
 ls -l artifacts/
-pwda
+pwd
 ########################### END ################################
